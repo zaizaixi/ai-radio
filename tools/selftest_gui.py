@@ -18,12 +18,19 @@ from radio.config import ensure_config  # noqa: E402
 
 TABS = ["电台", "音色", "人设", "稿件", "设置"]
 failures: list[str] = []
+skips: list[str] = []
 
 
 def check(name: str, ok: bool, detail: str = "") -> None:
     print(f"  {'✓' if ok else '✗'} {name}" + (f"   {detail}" if detail else ""))
     if not ok:
         failures.append(name)
+
+
+def skip(name: str, why: str) -> None:
+    """跳过 —— 通常是「模型还没下载」这种预期情况，不算失败。"""
+    print(f"  ○ {name}   （跳过：{why}）")
+    skips.append(name)
 
 
 def main() -> int:
@@ -88,8 +95,12 @@ def main() -> int:
         profiles = gui.backend.kit.profiles()
         check("音色库能读出音色列表", isinstance(profiles, list),
               "、".join(p.display for p in profiles) or "（当前没有音色）")
-        check("克隆引擎资源齐备", gui.backend.kit.ready(),
-              "、".join(gui.backend.kit.missing_parts()) or "全部就位")
+        # 引擎资源是首次使用时才下载的，全新克隆里没有是正常的，跳过而不是判失败
+        if gui.backend.kit.ready():
+            check("克隆引擎资源齐备", True, "全部就位")
+        else:
+            skip("克隆引擎资源齐备",
+                 "还没下载：" + "、".join(gui.backend.kit.missing_parts()))
         if profiles:
             gui.tab_voice._preview(profiles[0].key)
             gui.root.update()
@@ -131,12 +142,17 @@ def main() -> int:
     scratch.unlink(missing_ok=True)      # 清掉配置副本
 
     print("\n" + "=" * 60)
+    if skips:
+        print(f"跳过 {len(skips)} 项（多为还没下载模型，不是问题）：")
+        for item in skips:
+            print(f"  ○ {item}")
+        print()
     if failures:
         print(f"失败 {len(failures)} 项：")
         for item in failures:
             print(f"  ✗ {item}")
         return 1
-    print("图形界面自测全部通过 ✓")
+    print("图形界面自测全部通过 ✓" + (f"（{len(skips)} 项已跳过）" if skips else ""))
     return 0
 
 
