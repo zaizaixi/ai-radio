@@ -1,0 +1,806 @@
+{
+ "voices": {
+  "zf_001": {
+   "sid": 3,
+   "gender": "女",
+   "pitch": 262.3,
+   "brightness": 1392.5,
+   "speed": 4.06,
+   "duration": 3.9
+  },
+  "zf_002": {
+   "sid": 4,
+   "gender": "女",
+   "pitch": 220.2,
+   "brightness": 1057.1,
+   "speed": 3.44,
+   "duration": 4.52
+  },
+  "zf_003": {
+   "sid": 5,
+   "gender": "女",
+   "pitch": 220.2,
+   "brightness": 1129.6,
+   "speed": 3.39,
+   "duration": 4.56
+  },
+  "zf_004": {
+   "sid": 6,
+   "gender": "女",
+   "pitch": 224.3,
+   "brightness": 1343.9,
+   "speed": 3.58,
+   "duration": 4.38
+  },
+  "zf_005": {
+   "sid": 7,
+   "gender": "女",
+   "pitch": 240.0,
+   "brightness": 1590.9,
+   "speed": 3.34,
+   "duration": 4.48
+  },
+  "zf_006": {
+   "sid": 8,
+   "gender": "女",
+   "pitch": 200.8,
+   "brightness": 1058.0,
+   "speed": 3.37,
+   "duration": 4.37
+  },
+  "zf_007": {
+   "sid": 9,
+   "gender": "女",
+   "pitch": 195.9,
+   "brightness": 1239.0,
+   "speed": 2.62,
+   "duration": 4.7
+  },
+  "zf_008": {
+   "sid": 10,
+   "gender": "女",
+   "pitch": 218.2,
+   "brightness": 1312.8,
+   "speed": 3.55,
+   "duration": 4.46
+  },
+  "zf_017": {
+   "sid": 11,
+   "gender": "女",
+   "pitch": 292.7,
+   "brightness": 1937.0,
+   "speed": 3.64,
+   "duration": 4.24
+  },
+  "zf_018": {
+   "sid": 12,
+   "gender": "女",
+   "pitch": 243.7,
+   "brightness": 1581.2,
+   "speed": 3.2,
+   "duration": 4.69
+  },
+  "zf_019": {
+   "sid": 13,
+   "gender": "女",
+   "pitch": 166.7,
+   "brightness": 1146.8,
+   "speed": 3.03,
+   "duration": 5.06
+  },
+  "zf_021": {
+   "sid": 14,
+   "gender": "女",
+   "pitch": 247.4,
+   "brightness": 1543.7,
+   "speed": 4.05,
+   "duration": 3.87
+  },
+  "zf_022": {
+   "sid": 15,
+   "gender": "女",
+   "pitch": 198.3,
+   "brightness": 1365.0,
+   "speed": 3.13,
+   "duration": 4.93
+  },
+  "zf_023": {
+   "sid": 16,
+   "gender": "女",
+   "pitch": 235.3,
+   "brightness": 1217.6,
+   "speed": 3.77,
+   "duration": 4.18
+  },
+  "zf_024": {
+   "sid": 17,
+   "gender": "女",
+   "pitch": 228.6,
+   "brightness": 1778.9,
+   "speed": 3.28,
+   "duration": 4.71
+  },
+  "zf_026": {
+   "sid": 18,
+   "gender": "女",
+   "pitch": 240.0,
+   "brightness": 1481.7,
+   "speed": 3.06,
+   "duration": 4.7
+  },
+  "zf_027": {
+   "sid": 19,
+   "gender": "女",
+   "pitch": 237.6,
+   "brightness": 1433.8,
+   "speed": 4.02,
+   "duration": 3.88
+  },
+  "zf_028": {
+   "sid": 20,
+   "gender": "女",
+   "pitch": 260.9,
+   "brightness": 1473.0,
+   "speed": 3.34,
+   "duration": 4.46
+  },
+  "zf_032": {
+   "sid": 21,
+   "gender": "女",
+   "pitch": 216.2,
+   "brightness": 1216.4,
+   "speed": 3.49,
+   "duration": 4.57
+  },
+  "zf_036": {
+   "sid": 22,
+   "gender": "女",
+   "pitch": 189.0,
+   "brightness": 1321.5,
+   "speed": 3.45,
+   "duration": 4.31
+  },
+  "zf_038": {
+   "sid": 23,
+   "gender": "女",
+   "pitch": 266.7,
+   "brightness": 2171.7,
+   "speed": 3.09,
+   "duration": 4.81
+  },
+  "zf_039": {
+   "sid": 24,
+   "gender": "女",
+   "pitch": 204.3,
+   "brightness": 1759.1,
+   "speed": 3.15,
+   "duration": 4.79
+  },
+  "zf_040": {
+   "sid": 25,
+   "gender": "女",
+   "pitch": 210.5,
+   "brightness": 1438.8,
+   "speed": 3.32,
+   "duration": 4.88
+  },
+  "zf_042": {
+   "sid": 26,
+   "gender": "女",
+   "pitch": 258.1,
+   "brightness": 1902.9,
+   "speed": 3.28,
+   "duration": 4.86
+  },
+  "zf_043": {
+   "sid": 27,
+   "gender": "女",
+   "pitch": 266.7,
+   "brightness": 1890.9,
+   "speed": 3.48,
+   "duration": 4.53
+  },
+  "zf_044": {
+   "sid": 28,
+   "gender": "女",
+   "pitch": 228.6,
+   "brightness": 1981.8,
+   "speed": 3.49,
+   "duration": 4.64
+  },
+  "zf_046": {
+   "sid": 29,
+   "gender": "女",
+   "pitch": 155.8,
+   "brightness": 1704.8,
+   "speed": 2.91,
+   "duration": 4.81
+  },
+  "zf_047": {
+   "sid": 30,
+   "gender": "女",
+   "pitch": 212.4,
+   "brightness": 1642.2,
+   "speed": 3.54,
+   "duration": 4.42
+  },
+  "zf_048": {
+   "sid": 31,
+   "gender": "女",
+   "pitch": 235.3,
+   "brightness": 1657.4,
+   "speed": 2.84,
+   "duration": 5.32
+  },
+  "zf_049": {
+   "sid": 32,
+   "gender": "女",
+   "pitch": 205.1,
+   "brightness": 2078.5,
+   "speed": 3.0,
+   "duration": 4.85
+  },
+  "zf_051": {
+   "sid": 33,
+   "gender": "女",
+   "pitch": 187.5,
+   "brightness": 1524.9,
+   "speed": 3.05,
+   "duration": 4.95
+  },
+  "zf_059": {
+   "sid": 34,
+   "gender": "女",
+   "pitch": 209.6,
+   "brightness": 1792.3,
+   "speed": 3.3,
+   "duration": 4.49
+  },
+  "zf_060": {
+   "sid": 35,
+   "gender": "女",
+   "pitch": 237.6,
+   "brightness": 2035.0,
+   "speed": 3.03,
+   "duration": 4.82
+  },
+  "zf_067": {
+   "sid": 36,
+   "gender": "女",
+   "pitch": 252.6,
+   "brightness": 2473.9,
+   "speed": 3.39,
+   "duration": 4.33
+  },
+  "zf_070": {
+   "sid": 37,
+   "gender": "女",
+   "pitch": 254.0,
+   "brightness": 1522.0,
+   "speed": 3.06,
+   "duration": 4.87
+  },
+  "zf_071": {
+   "sid": 38,
+   "gender": "女",
+   "pitch": 252.6,
+   "brightness": 1407.0,
+   "speed": 3.16,
+   "duration": 4.81
+  },
+  "zf_072": {
+   "sid": 39,
+   "gender": "女",
+   "pitch": 282.4,
+   "brightness": 2030.0,
+   "speed": 3.22,
+   "duration": 4.7
+  },
+  "zf_073": {
+   "sid": 40,
+   "gender": "女",
+   "pitch": 333.3,
+   "brightness": 1872.5,
+   "speed": 3.15,
+   "duration": 4.82
+  },
+  "zf_074": {
+   "sid": 41,
+   "gender": "女",
+   "pitch": 322.2,
+   "brightness": 1770.7,
+   "speed": 3.2,
+   "duration": 4.61
+  },
+  "zf_075": {
+   "sid": 42,
+   "gender": "女",
+   "pitch": 263.7,
+   "brightness": 1989.5,
+   "speed": 2.89,
+   "duration": 4.96
+  },
+  "zf_076": {
+   "sid": 43,
+   "gender": "女",
+   "pitch": 296.3,
+   "brightness": 2065.7,
+   "speed": 3.14,
+   "duration": 4.65
+  },
+  "zf_077": {
+   "sid": 44,
+   "gender": "女",
+   "pitch": 282.4,
+   "brightness": 2165.6,
+   "speed": 3.44,
+   "duration": 4.29
+  },
+  "zf_078": {
+   "sid": 45,
+   "gender": "女",
+   "pitch": 228.6,
+   "brightness": 1402.4,
+   "speed": 3.09,
+   "duration": 4.73
+  },
+  "zf_079": {
+   "sid": 46,
+   "gender": "女",
+   "pitch": 144.6,
+   "brightness": 1642.9,
+   "speed": 3.35,
+   "duration": 4.46
+  },
+  "zf_083": {
+   "sid": 47,
+   "gender": "女",
+   "pitch": 242.4,
+   "brightness": 1765.9,
+   "speed": 3.37,
+   "duration": 4.38
+  },
+  "zf_084": {
+   "sid": 48,
+   "gender": "女",
+   "pitch": 252.6,
+   "brightness": 1804.0,
+   "speed": 3.23,
+   "duration": 4.64
+  },
+  "zf_085": {
+   "sid": 49,
+   "gender": "女",
+   "pitch": 285.7,
+   "brightness": 1546.2,
+   "speed": 2.96,
+   "duration": 4.71
+  },
+  "zf_086": {
+   "sid": 50,
+   "gender": "女",
+   "pitch": 237.6,
+   "brightness": 2251.6,
+   "speed": 3.52,
+   "duration": 4.32
+  },
+  "zf_087": {
+   "sid": 51,
+   "gender": "女",
+   "pitch": 226.4,
+   "brightness": 2108.0,
+   "speed": 3.31,
+   "duration": 4.59
+  },
+  "zf_088": {
+   "sid": 52,
+   "gender": "女",
+   "pitch": 252.6,
+   "brightness": 1567.6,
+   "speed": 4.13,
+   "duration": 3.93
+  },
+  "zf_090": {
+   "sid": 53,
+   "gender": "女",
+   "pitch": 259.5,
+   "brightness": 1903.2,
+   "speed": 3.22,
+   "duration": 4.78
+  },
+  "zf_092": {
+   "sid": 54,
+   "gender": "女",
+   "pitch": 296.3,
+   "brightness": 2117.2,
+   "speed": 3.67,
+   "duration": 4.24
+  },
+  "zf_093": {
+   "sid": 55,
+   "gender": "女",
+   "pitch": 266.7,
+   "brightness": 1761.4,
+   "speed": 3.25,
+   "duration": 4.55
+  },
+  "zf_094": {
+   "sid": 56,
+   "gender": "女",
+   "pitch": 192.0,
+   "brightness": 1025.7,
+   "speed": 3.31,
+   "duration": 4.33
+  },
+  "zf_099": {
+   "sid": 57,
+   "gender": "女",
+   "pitch": 193.5,
+   "brightness": 1253.6,
+   "speed": 3.23,
+   "duration": 4.71
+  },
+  "zm_009": {
+   "sid": 58,
+   "gender": "男",
+   "pitch": 114.3,
+   "brightness": 1358.1,
+   "speed": 3.75,
+   "duration": 3.91
+  },
+  "zm_010": {
+   "sid": 59,
+   "gender": "男",
+   "pitch": 126.3,
+   "brightness": 910.5,
+   "speed": 3.81,
+   "duration": 3.99
+  },
+  "zm_011": {
+   "sid": 60,
+   "gender": "男",
+   "pitch": 109.1,
+   "brightness": 778.3,
+   "speed": 3.96,
+   "duration": 3.93
+  },
+  "zm_012": {
+   "sid": 61,
+   "gender": "男",
+   "pitch": 143.7,
+   "brightness": 1185.1,
+   "speed": 3.76,
+   "duration": 4.17
+  },
+  "zm_013": {
+   "sid": 62,
+   "gender": "男",
+   "pitch": 112.4,
+   "brightness": 765.8,
+   "speed": 3.8,
+   "duration": 3.79
+  },
+  "zm_014": {
+   "sid": 63,
+   "gender": "男",
+   "pitch": 98.8,
+   "brightness": 895.2,
+   "speed": 3.02,
+   "duration": 4.4
+  },
+  "zm_015": {
+   "sid": 64,
+   "gender": "男",
+   "pitch": 110.6,
+   "brightness": 1203.5,
+   "speed": 2.94,
+   "duration": 4.18
+  },
+  "zm_016": {
+   "sid": 65,
+   "gender": "男",
+   "pitch": 162.7,
+   "brightness": 713.2,
+   "speed": 3.01,
+   "duration": 4.63
+  },
+  "zm_020": {
+   "sid": 66,
+   "gender": "男",
+   "pitch": 201.7,
+   "brightness": 1334.9,
+   "speed": 2.56,
+   "duration": 5.77
+  },
+  "zm_025": {
+   "sid": 67,
+   "gender": "男",
+   "pitch": 110.1,
+   "brightness": 885.5,
+   "speed": 3.08,
+   "duration": 4.03
+  },
+  "zm_029": {
+   "sid": 68,
+   "gender": "男",
+   "pitch": 100.4,
+   "brightness": 1021.0,
+   "speed": 3.72,
+   "duration": 4.28
+  },
+  "zm_030": {
+   "sid": 69,
+   "gender": "男",
+   "pitch": 131.1,
+   "brightness": 1478.6,
+   "speed": 2.7,
+   "duration": 4.53
+  },
+  "zm_031": {
+   "sid": 70,
+   "gender": "男",
+   "pitch": 132.6,
+   "brightness": 904.5,
+   "speed": 3.03,
+   "duration": 5.05
+  },
+  "zm_033": {
+   "sid": 71,
+   "gender": "男",
+   "pitch": 105.7,
+   "brightness": 600.5,
+   "speed": 3.25,
+   "duration": 4.4
+  },
+  "zm_034": {
+   "sid": 72,
+   "gender": "男",
+   "pitch": 107.9,
+   "brightness": 852.4,
+   "speed": 3.26,
+   "duration": 4.36
+  },
+  "zm_035": {
+   "sid": 73,
+   "gender": "男",
+   "pitch": 140.4,
+   "brightness": 842.4,
+   "speed": 2.66,
+   "duration": 5.11
+  },
+  "zm_037": {
+   "sid": 74,
+   "gender": "男",
+   "pitch": 123.1,
+   "brightness": 704.8,
+   "speed": 2.91,
+   "duration": 4.8
+  },
+  "zm_041": {
+   "sid": 75,
+   "gender": "男",
+   "pitch": 195.1,
+   "brightness": 1256.5,
+   "speed": 3.63,
+   "duration": 4.29
+  },
+  "zm_045": {
+   "sid": 76,
+   "gender": "男",
+   "pitch": 145.5,
+   "brightness": 1440.5,
+   "speed": 3.58,
+   "duration": 4.21
+  },
+  "zm_050": {
+   "sid": 77,
+   "gender": "男",
+   "pitch": 150.9,
+   "brightness": 1457.4,
+   "speed": 3.63,
+   "duration": 3.97
+  },
+  "zm_052": {
+   "sid": 78,
+   "gender": "男",
+   "pitch": 175.2,
+   "brightness": 1216.7,
+   "speed": 3.24,
+   "duration": 4.4
+  },
+  "zm_053": {
+   "sid": 79,
+   "gender": "男",
+   "pitch": 121.8,
+   "brightness": 1248.9,
+   "speed": 2.97,
+   "duration": 5.0
+  },
+  "zm_054": {
+   "sid": 80,
+   "gender": "男",
+   "pitch": 136.8,
+   "brightness": 1449.3,
+   "speed": 2.97,
+   "duration": 4.79
+  },
+  "zm_055": {
+   "sid": 81,
+   "gender": "男",
+   "pitch": 131.1,
+   "brightness": 1337.9,
+   "speed": 3.53,
+   "duration": 4.19
+  },
+  "zm_056": {
+   "sid": 82,
+   "gender": "男",
+   "pitch": 154.8,
+   "brightness": 1338.7,
+   "speed": 3.07,
+   "duration": 4.91
+  },
+  "zm_057": {
+   "sid": 83,
+   "gender": "男",
+   "pitch": 114.8,
+   "brightness": 1168.9,
+   "speed": 3.05,
+   "duration": 4.61
+  },
+  "zm_058": {
+   "sid": 84,
+   "gender": "男",
+   "pitch": 120.0,
+   "brightness": 1526.0,
+   "speed": 3.33,
+   "duration": 4.34
+  },
+  "zm_061": {
+   "sid": 85,
+   "gender": "男",
+   "pitch": 184.6,
+   "brightness": 1127.6,
+   "speed": 2.6,
+   "duration": 4.79
+  },
+  "zm_062": {
+   "sid": 86,
+   "gender": "男",
+   "pitch": 151.9,
+   "brightness": 1153.1,
+   "speed": 2.66,
+   "duration": 4.86
+  },
+  "zm_063": {
+   "sid": 87,
+   "gender": "男",
+   "pitch": 163.3,
+   "brightness": 980.3,
+   "speed": 2.96,
+   "duration": 4.6
+  },
+  "zm_064": {
+   "sid": 88,
+   "gender": "男",
+   "pitch": 122.4,
+   "brightness": 1196.0,
+   "speed": 3.13,
+   "duration": 4.89
+  },
+  "zm_065": {
+   "sid": 89,
+   "gender": "男",
+   "pitch": 170.2,
+   "brightness": 1164.4,
+   "speed": 3.21,
+   "duration": 4.68
+  },
+  "zm_066": {
+   "sid": 90,
+   "gender": "男",
+   "pitch": 137.1,
+   "brightness": 1026.4,
+   "speed": 3.23,
+   "duration": 4.48
+  },
+  "zm_068": {
+   "sid": 91,
+   "gender": "男",
+   "pitch": 154.3,
+   "brightness": 1264.9,
+   "speed": 3.08,
+   "duration": 4.59
+  },
+  "zm_069": {
+   "sid": 92,
+   "gender": "男",
+   "pitch": 142.0,
+   "brightness": 1463.6,
+   "speed": 2.99,
+   "duration": 4.89
+  },
+  "zm_080": {
+   "sid": 93,
+   "gender": "男",
+   "pitch": 134.1,
+   "brightness": 1306.5,
+   "speed": 2.86,
+   "duration": 5.39
+  },
+  "zm_081": {
+   "sid": 94,
+   "gender": "男",
+   "pitch": 134.1,
+   "brightness": 1776.8,
+   "speed": 2.73,
+   "duration": 5.09
+  },
+  "zm_082": {
+   "sid": 95,
+   "gender": "男",
+   "pitch": 151.9,
+   "brightness": 1041.9,
+   "speed": 2.78,
+   "duration": 4.49
+  },
+  "zm_089": {
+   "sid": 96,
+   "gender": "男",
+   "pitch": 133.7,
+   "brightness": 1271.6,
+   "speed": 3.29,
+   "duration": 4.4
+  },
+  "zm_091": {
+   "sid": 97,
+   "gender": "男",
+   "pitch": 123.7,
+   "brightness": 1496.0,
+   "speed": 2.99,
+   "duration": 4.46
+  },
+  "zm_095": {
+   "sid": 98,
+   "gender": "男",
+   "pitch": 157.4,
+   "brightness": 1022.4,
+   "speed": 3.45,
+   "duration": 4.34
+  },
+  "zm_096": {
+   "sid": 99,
+   "gender": "男",
+   "pitch": 173.3,
+   "brightness": 933.0,
+   "speed": 3.6,
+   "duration": 4.27
+  },
+  "zm_097": {
+   "sid": 100,
+   "gender": "男",
+   "pitch": 129.7,
+   "brightness": 1037.5,
+   "speed": 3.74,
+   "duration": 4.26
+  },
+  "zm_098": {
+   "sid": 101,
+   "gender": "男",
+   "pitch": 98.2,
+   "brightness": 803.1,
+   "speed": 3.03,
+   "duration": 4.91
+  },
+  "zm_100": {
+   "sid": 102,
+   "gender": "男",
+   "pitch": 138.7,
+   "brightness": 1214.8,
+   "speed": 3.02,
+   "duration": 5.08
+  }
+ },
+ "probe_text": "这里是深夜电台，欢迎收听今晚的节目。",
+ "updated": "2026-10-12 16:29:07"
+}
