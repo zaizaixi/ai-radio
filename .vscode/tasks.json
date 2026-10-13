@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "自检：API / 弹幕 / 语音 / 音频",
+      "type": "shell",
+      "command": "python",
+      "args": ["run.py", "check"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "启动 AI 电台",
+      "type": "shell",
+      "command": "python",
+      "args": ["run.py"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "本地调试（控制台弹幕）",
+      "type": "shell",
+      "command": "python",
+      "args": ["run.py", "--console"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    }
+  ]
+}
