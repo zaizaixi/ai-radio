@@ -276,7 +276,50 @@ async def cmd_check(cfg: Config) -> int:
     print(f"      引擎       : {cfg.tts.provider}")
     print(f"      运行时     : {'已安装' if kit.runtime_ready() else '★ 未安装 ★'}")
 
-    if kind == "kokoro":
+    if kind == "vits":
+        from radio.tts.characters import CHARACTER_VOICES, get as get_character
+
+        installed = [v for v in CHARACTER_VOICES if kit.character_ready(v.key)]
+        print(f"      角色音色   : {len(installed)}/{len(CHARACTER_VOICES)} 个模型已下载")
+        print(f"      语感       : 起伏 {cfg.tts.noise_scale}"
+              f" / 松紧 {cfg.tts.noise_scale_w}"
+              f" / 句间停顿 {cfg.tts.silence_scale}")
+
+        raw = (cfg.tts.voice or "").strip()
+        model_key, sid = raw, 0
+        for sep in (":", "#", "/"):
+            if sep in raw:
+                head, tail = raw.rsplit(sep, 1)
+                if tail.strip().isdigit():
+                    model_key, sid = head.strip(), int(tail.strip())
+                    break
+        voice = get_character(model_key)
+        if voice is None:
+            voice = installed[0] if installed else None
+            if raw and installed:
+                print(f"      当前音色   : ★ {raw!r} 认不出来，回落到 {voice.key} ★")
+        if voice is not None:
+            mark = "" if kit.character_ready(voice.key) else "（还没下载）"
+            print(f"      当前音色   : {voice.key}:{sid}  "
+                  f"{voice.name}（{voice.origin}·{voice.gender}）{mark}")
+
+        if not kit.runtime_ready():
+            print("\n      提示：运行  python run.py setup  自动下载运行时")
+            problems.append("sherpa-onnx 运行时没装好（跑一下 python run.py setup）")
+        elif not installed:
+            print("\n      提示：在软件「音色」页点「下载推荐音色」（约 115MB），")
+            print("            或者运行  python run.py setup")
+            problems.append("角色音色一个都没下载（去软件「音色」页下载）")
+        elif voice is not None and not kit.character_ready(voice.key):
+            print(f"\n      提示：当前选的 {voice.key} 还没下载，"
+                  f"运行 python run.py setup 会自动装")
+            problems.append(f"当前音色 {voice.key} 还没下载")
+        else:
+            print("\n      提示：每个模型有 804 个说话人编号，编号之间质量差别大。")
+            print("            在软件「音色」页用「下一个 ▶」连着试听，")
+            print("            找到听着正常的再点「✓ 就用这个」。")
+
+    elif kind == "kokoro":
         from radio.tts.kokoro import KOKORO_VOICES, load_profiles, parse_voice
 
         measured = load_profiles()
@@ -325,8 +368,25 @@ async def cmd_check(cfg: Config) -> int:
             print("            录一段 5~8 秒的干声（WAV）并填上内容即可。")
             problems.append("还没有克隆音色（去软件「音色」页新建一个）")
 
-    # ---- 合成自检：两个引擎共用 ----
-    if kind == "kokoro":
+    # ---- 合成自检：三个引擎共用 ----
+    if kind == "vits":
+        from radio.tts.characters import get as _get_char
+
+        _raw = (cfg.tts.voice or "").strip()
+        _key, _sid = _raw, 0
+        for _sep in (":", "#", "/"):
+            if _sep in _raw:
+                _h, _t = _raw.rsplit(_sep, 1)
+                if _t.strip().isdigit():
+                    _key, _sid = _h.strip(), int(_t.strip())
+                    break
+        _v = _get_char(_key)
+        if _v is None and installed:
+            _v = installed[0]
+        can_test = bool(_v) and kit.character_ready(_v.key)
+        test_voice = f"{_v.key}:{_sid}" if _v else ""
+        test_label = f"角色音色「{_v.name}」的编号 {_sid}" if _v else ""
+    elif kind == "kokoro":
         from radio.tts.kokoro import parse_voice as _parse
 
         _voice = _parse(cfg.tts.voice)
