@@ -38,12 +38,23 @@ from radio.tts.base import VoiceParams                                  # noqa: 
 from radio.voices import VoiceKit                                   # noqa: E402
 
 failures: list[str] = []
+skips: list[str] = []
 
 
 def check(name: str, ok: bool, detail: str = "") -> None:
     print(f"{'  ✓' if ok else '  ✗'} {name}" + (f"   {detail}" if detail else ""))
     if not ok:
         failures.append(name)
+
+
+def skip(name: str, why: str) -> None:
+    """跳过一项检查 —— 通常是「还没下载模型」这种预期情况。
+
+    全新克隆跑自测时模型目录是空的。那不是失败，只是还没装。
+    报成 ✗ 会让刚装好的人以为程序坏了。
+    """
+    print(f"  ○ {name}   （跳过：{why}）")
+    skips.append(name)
 
 
 # ---------------------------------------------------------------------------
@@ -406,6 +417,17 @@ async def test_zipvoice() -> None:
     check("混音数值正确（1000和3000平均是2000）", samples[0] == 2000, str(samples[:3]))
 
     kit = VoiceKit(ROOT / "sherpa", ROOT / "models", ROOT / "voices")
+
+    # 引擎资源是「首次使用时才下载」的。全新克隆里没有它们是正常的，
+    # 不是失败 —— 报成 ✗ 会让刚装上的人以为程序坏了。
+    if not kit.runtime_ready():
+        skip("克隆引擎运行时在位", "还没下载（python run.py setup）")
+        skip("ZipVoice 模型在位", "同上")
+        skip("有可用的克隆音色", "同上")
+        skip("ZipVoice 真实合成成功", "同上")
+        skip("相同文本命中缓存", "同上")
+        skip("模型常驻，第二句没有加载开销", "同上")
+        return
     check("克隆引擎运行时在位", kit.runtime_ready(), str(kit.tts_exe))
     check("ZipVoice 模型在位", kit.model_ready(),
           f"encoder={kit.encoder is not None} decoder={kit.decoder is not None} "
@@ -422,6 +444,9 @@ async def test_zipvoice() -> None:
                 "那还是三十六年前, 一九八七年. 我呢考上了武汉大学的计算机系.",
                 name="自测临时音色")
             ready = [temp_profile]
+    if not kit.ready():
+        skip("有可用的克隆音色", "ZipVoice 模型还没下载")
+        return
     check("有可用的克隆音色", bool(ready),
           "、".join(p.display for p in ready) or "（没有）")
 
@@ -527,12 +552,17 @@ async def main() -> int:
     test_launcher_files()
 
     print("\n" + "=" * 62)
+    if skips:
+        print(f"跳过 {len(skips)} 项（多为还没下载模型，不是问题）：")
+        for item in skips:
+            print(f"  ○ {item}")
+        print()
     if failures:
         print(f"失败 {len(failures)} 项：")
         for item in failures:
             print(f"  ✗ {item}")
         return 1
-    print("单元测试全部通过 ✓")
+    print("单元测试全部通过 ✓" + (f"（{len(skips)} 项已跳过）" if skips else ""))
     return 0
 
 
