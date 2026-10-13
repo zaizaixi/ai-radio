@@ -1,0 +1,32 @@
+{
+  "python.terminal.activateEnvironment": false,
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONUTF8": "1"
+  },
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": true,
+  "files.eol": "\r\n",
+  "files.associations": {
+    "*.toml": "toml"
+  },
+  "editor.rulers": [100],
+  "editor.formatOnSave": false,
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "files.trimTrailingWhitespace": false
+  },
+  "search.exclude": {
+    "**/logs": true,
+    "**/__pycache__": true,
+    "**/.venv": true
+  },
+  "files.watcherExclude": {
+    "**/logs/**": true,
+    "**/__pycache__/**": true
+  }
+}
