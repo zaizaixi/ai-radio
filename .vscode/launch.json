@@ -1,0 +1,108 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶ 启动 AI 电台",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "1 常用", "order": 1 }
+    },
+    {
+      "name": "⌨ 本地调试（控制台弹幕 + 不出声）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["--console", "--no-tts"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "1 常用", "order": 2 }
+    },
+    {
+      "name": "🔊 本地调试（控制台弹幕 + 正常出声）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["--console"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "1 常用", "order": 3 }
+    },
+    {
+      "name": "🔍 环境自检（API/弹幕/语音全测）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["check"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "2 排查", "order": 1 }
+    },
+    {
+      "name": "📡 只测弹幕连接",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["danmaku", "${input:roomId}"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "2 排查", "order": 2 }
+    },
+    {
+      "name": "🎧 试听当前人设的声音",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["say", "各位听众晚上好，欢迎收听今晚的节目。"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "2 排查", "order": 3 }
+    },
+    {
+      "name": "🎛 列出音频播放设备",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["devices"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "2 排查", "order": 4 }
+    },
+    {
+      "name": "🎙 列出可用音色",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run.py",
+      "args": ["voices"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": { "PYTHONIOENCODING": "utf-8" },
+      "presentation": { "group": "2 排查", "order": 5 }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "roomId",
+      "type": "promptString",
+      "description": "要测试的 B 站直播间房间号（或直接粘直播间链接）",
+      "default": ""
+    }
+  ]
+}
